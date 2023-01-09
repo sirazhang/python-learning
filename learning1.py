@@ -83,5 +83,5 @@ print(s)
 s = set([1, 1, 2, 2, 3, 3])
 s.add(4)
 print(s)
-s.remove(4)23
+s.remove(4)
 print(s)
