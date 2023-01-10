@@ -1,0 +1,13 @@
+s = set([1, 2, 3])
+print(s)
+s.add(3)
+s.add(2)
+print(s)
+
+s = set([1, 2, 3])
+print(s)
+s = set([1, 1, 2, 2, 3, 3])
+s.add(4)
+print(s)
+s.remove(4)
+print(s)

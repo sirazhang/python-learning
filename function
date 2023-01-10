@@ -1,0 +1,42 @@
+b=max(2, 3, 1, -5)
+print(b)
+a=abs(-20)
+print(a)
+
+c=int('123')
+print(c)
+d=int(12.34)
+print(d)
+e=float('12.34')
+print(e)
+f=str(1.23)
+print(f)
+
+g=abs
+print(g(-3))
+
+
+def my_abs(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+print(my_abs(-9))
+
+import math
+
+def move(x, y, step, angle=0):
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+r= move(100, 100, 60, math.pi / 6)
+print(r)
+
+import math
+a=float(input('a='))
+b=float(input('b='))
+c=float(input('c='))
+def quadratic(a, b, c):
+    x1= ((-b+math.sqrt(b**2-4*a*c))/(2*a))
+    x2= ((-b-math.sqrt(b**2-4*a*c))/(2*a))
+print('x1=','x1','t','x2=','x2')
