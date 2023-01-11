@@ -1,0 +1,92 @@
+def power(x):
+    return x * x
+n=power(5)
+print(n)
+
+def enroll(name, gender, age=6, city='Beijing'):
+    print('name:', name)
+    print('gender:', gender)
+    print('age:', age)
+    print('city:', city)
+
+print(enroll('Sarah', 'F'))
+    
+def add_end(L=[]):
+    L=([1, 2, 3])
+    L.append('END')
+    return L
+    print(L)
+
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+    print(s)
+
+
+def second_largest(numbers):
+    # First, we sort the list in descending order
+    numbers.sort(reverse=True)
+    # Then, we return the second element
+    # In the sorted list
+    return numbers[1]
+
+a = [1, 2, 3, 4, 5, 6, 7]
+
+print(second_largest(a))
+
+def sum_set(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
+b=[-1, -2, -3, 1, 2, 3, 4, 5]
+print(sum_set(b))
+
+def find_pair(arr, s):
+    left, right = 0, len(arr)-1
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        if current_sum == s:
+            return (arr[left], arr[right])
+        elif current_sum < s:
+            left += 1
+        else:
+            right -= 1
+    return None
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, 4, 11, -2]
+s = 7
+print(find_pair(arr, s))
+
+
+def find_pair(arr, s):
+    visited = set()
+    for num in arr:
+        if s - num in visited:
+            return (num, s-num)
+        visited.add(num)
+    return None
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, 4, 11, -2, -3, -4, 11, 12]
+s = 8
+print(find_pair(arr, s))
+
+
+def find_repeated_number(nums):
+    for i in range(len(nums)):
+        if nums[abs(nums[i])] >= 0:
+            nums[abs(nums[i])] = -nums[abs(nums[i])]
+        else:
+            return abs(nums[i])
+    return None
+
+nums = [1, 2, 3, 4, 5, 2, 6, 7, 8, 9, 10, 8, 11, 12, 13, 3, 4, 5, 5]
+print(find_repeated_number(nums))
