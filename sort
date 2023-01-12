@@ -1,0 +1,34 @@
+def second_largest(numbers):
+    # First, we sort the list in descending order
+    numbers.sort(reverse=True)
+    # Then, we return the second element
+    # In the sorted list
+    return numbers[1]
+
+a = [1, 2, 3, 4, 5, 6, 7]
+
+print(second_largest(a))
+
+numbers = [3, 1, 4, 2, 5]
+numbers.sort()
+print(numbers)
+
+
+numbers = [3, 1, 4, 2, 5]
+sorted_numbers = sorted(numbers)
+print(numbers)
+print(sorted_numbers)
+
+words = ['apple', 'banana', 'cherry']
+words.sort(reverse=True)
+print(words)
+
+words = ['apple', 'Banana', 'cherry', 'pear', 'watermelon']
+words.sort(key=lambda x: x. lower())
+print(words)
+
+words = ['apple', 'pear', 'watermelon','bananas','melon', 'peach']
+words.sort(key=lambda x: x. lower())
+print(words)
+words.sort(key=lambda x: len(x))
+print(words)
