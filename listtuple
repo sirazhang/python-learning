@@ -1,0 +1,19 @@
+L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack','Jianing','Hui','Ningning','Meng']
+n = 4
+r = []
+for i in range(n):
+    r.append(L[i])
+print(r)
+m=L[-2:-1]
+print(m)
+
+a=(0, 1, 2, 3, 4, 5)[:3]
+print(a)
+def trim(s):
+    start = 0
+    end = len(s) - 1
+    while start <= end and s[start] == ' ':
+        start += 1
+    while start <= end and s[end] == ' ':
+        end -= 1
+    return s[start:end+1]
