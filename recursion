@@ -1,0 +1,70 @@
+def climb_stairs(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        return climb_stairs(n - 1) + climb_stairs(n - 2)
+
+def climb_stairs(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        a, b = 1, 2
+        for _ in range(2, n):
+            c = a + b
+            a = b
+            b = c
+        return b
+
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            c = a + b
+            a = b
+            b = c
+        return b
+
+
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        print(b)
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+
+print(fib(10))
+
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+print(fib(6))
+
+def step(n):
+    if n==0: 
+        return 0
+    elif n==1: #如果只有一个台阶，只能一次走一步
+        return 1
+    elif n==2: #如果有2个台阶，可以一次走2个台阶，也可以分别走一个台阶
+        return 2
+    else: #如果有n个台阶，最后一步可能走了一个台阶也可能走了2个台阶
+          #如果最后一步走了一个台阶，那么就是step(n-1)
+          #如果最后一步走了二个台阶，那么就是step(n-2)
+        return step(n-1) + step(n-2)
+
+print(step(10))
